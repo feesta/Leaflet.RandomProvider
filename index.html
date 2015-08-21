@@ -12,7 +12,6 @@ body {
 }
 </style>
 <body>
-</body>
 <script>
 
 var urls = ['//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -51,25 +50,17 @@ var urls = ['//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 '//{s}.tiles.openrailwaymap.org/maxspeed/{z}/{x}/{y}.png',
 '//{s}.tiles.osm2world.org/osm/pngtiles/n/{z}/{x}/{y}.png']
 
-
-var Foo = (function() {
-  return {
-    init: function() {
-      var map_container = document.createElement('div');
-      map_container.id = 'map';
-      document.body.appendChild(map_container);
-      this.map = L.map(map_container, {
+document.addEventListener("DOMContentLoaded", function(event) { 
+    var map_container = document.createElement('div');
+    map_container.id = 'map';
+    document.body.appendChild(map_container);
+    var map = L.map(map_container, {
         attributionControl: false,
         zoom: 12, 
         center: [37.7630,-122.4435]
-      });
-      var hash = new L.Hash(this.map);
-      L.TileLayer.random(urls).addTo(this.map);
-
-    }
-  }
-})();
-setTimeout(function() {
-Foo.init();
-}, 1000);
+    });
+    var hash = new L.Hash(map);
+    L.TileLayer.random(urls).addTo(map);
+});
 </script>
+</body>
