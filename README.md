@@ -4,6 +4,8 @@ Leaflet plugin for loading tiles from random providers.
 
 ####Map demo: http://feesta.github.io/Leaflet.RandomProvider
 
+<img src='http://feesta.github.io/Leaflet.RandomProvider/Leaflet.RandomProvider5.png'>
+
 ```
 var urls = ['//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
             '//{s}.tile.osm.org/{z}/{x}/{y}.png',
@@ -21,3 +23,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 The list of providers I used: http://pastebin.com/ZEiLqGcH
 I'd like to expand this but also limit to ones with near-global coverage.
+
+Colors of the ocean:
+<img src='http://feesta.github.io/Leaflet.RandomProvider/Leaflet.RandomProvider2.png'>
